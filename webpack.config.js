@@ -38,14 +38,11 @@ module.exports = {
 		hotUpdateMainFilename: 'hot/hot-update.json',
 	},
 	devServer: {
-		contentBase: './src/index.js',
 		host: '127.0.0.1',
 		compress: true,
 		port: 9000, // port number
-		historyApiFallback: true,
-		quiet: true
+		historyApiFallback: true
 	},
-	// resolve alias (Absolute paths)
 	resolve: {
 		alias: {
 			Actions: path.resolve(__dirname, 'src/actions/'),
@@ -55,7 +52,7 @@ module.exports = {
 			Routes: path.resolve(__dirname, 'src/routes/'),
 			Constants: path.resolve(__dirname, 'src/constants/'),
 			Helpers: path.resolve(__dirname, 'src/helpers/'),
-			Api: path.resolve(__dirname, 'src/api/'), 
+			Api: path.resolve(__dirname, 'src/api/'),
 		}
 	},
 	module: {
@@ -86,7 +83,6 @@ module.exports = {
 					{
 						loader: 'url-loader',
 						options: {
-							limit: 10000,
 							name: 'static/media/[name].[hash:8].[ext]'
 						}
 					}
@@ -94,7 +90,7 @@ module.exports = {
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|svg)$/,
-				loader: 'url-loader?limit=100000'
+				loader: 'url-loader'
 			},
 			// Scss compiler
 			{
@@ -103,16 +99,6 @@ module.exports = {
 					loader: 'style-loader', // inject CSS to page
 				}, {
 					loader: 'css-loader', // translates CSS into CommonJS modules
-				}, {
-					loader: 'postcss-loader', // Run post css actions
-					options: {
-						plugins: function () { // post css plugins, can be exported to postcss.config.js
-							return [
-								require('precss'),
-								require('autoprefixer')
-							];
-						}
-					}
 				}, {
 					loader: 'sass-loader' // compiles Sass to CSS
 				}]

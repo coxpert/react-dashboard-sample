@@ -18,76 +18,74 @@
 // Custom themes Files
 @import "./custom/themes/themes";
 
-@import './fonts.css';
-
+@import "./fonts.css";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  input{
-    color: white;
-  }
-  
-  input::placeholder{
-    color: #eeeeee;
-  }
-
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-      transition: background-color 5000s ease-in-out 0s;
-      -webkit-text-fill-color: white !important;
-  }
-
-  a {
-     text-decoration: none;
-    } 
-
-#canvas{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    z-index: 1;
-    overflow: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: white;
+input {
+  color: white;
 }
 
-#shirt_container{
-  background-color: 'transparent';
+input::placeholder {
+  color: #eeeeee;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+#canvas {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+#shirt_container {
+  background-color: "transparent";
   position: relative;
   width: 400px;
   height: 450px;
 }
-#shirt_container img{
+#shirt_container img {
   opacity: 0;
   width: 100%;
 }
-#shirt_container canvas{
+#shirt_container canvas {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.rct-page-content{
+.rct-page-content {
   margin: 0;
   padding: 0;
 }
 
-
-.dot{
-  width:35px;
-  height:35px;
-  position:absolute;
-  background: url('../images/dollar.png');
+.dot {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  background: url("../images/dollar.png");
   background-size: 100% 100%;
 }
 #dollar_animation {
@@ -100,14 +98,19 @@ body{
   overflow: hidden;
 }
 
-#logo{ left:50%; top:50%; position:absolute; border-radius:10px; }
+#logo {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  border-radius: 10px;
+}
 
-
-#DiacoDesignLink,#pens{
+#DiacoDesignLink,
+#pens {
   color: #fff;
 }
 
-.mouse-cursor{
+.mouse-cursor {
   cursor: pointer;
 }
 
@@ -115,10 +118,9 @@ body{
 //   background: linear-gradient(180deg, #333366 0%, #333366 24.82%, #58588d 62.59%, #58588d 100%);
 // }
 
-.bg-main-custom-gradient{
-  background: linear-gradient( #333366 , #58588d);
+.bg-main-custom-gradient {
+  background: linear-gradient(#333366, #58588d);
 }
-
 
 /* Animate Background Image */
 @-webkit-keyframes aitf {
@@ -134,7 +136,7 @@ body{
   0% {
     left: 20px;
   }
-  50%{
+  50% {
     left: calc(100% - 60px);
   }
   100% {
@@ -143,82 +145,82 @@ body{
 }
 
 @keyframes triangle1 {
-  0%{
+  0% {
     transform: rotate(20deg);
   }
-  50%{
+  50% {
     transform: rotate(200deg);
   }
-  100%{
+  100% {
     transform: rotate(380deg);
   }
 }
 
 @keyframes triangle2 {
-  0%{
+  0% {
     transform: rotate(60deg);
   }
-  50%{
+  50% {
     transform: rotate(240deg);
   }
-  100%{
+  100% {
     transform: rotate(420deg);
   }
 }
 
 @keyframes dividermove {
-  0%{
+  0% {
     left: 50%;
     opacity: 1;
     width: 40px;
   }
-  25%{
+  25% {
     left: 20%;
     opacity: 0;
     width: 0px;
   }
-  50%{
+  50% {
     left: 50%;
     opacity: 1;
     width: 40px;
   }
-  75%{
+  75% {
     left: 80%;
     opacity: 0;
     width: 0px;
   }
-  100%{
+  100% {
     left: 50%;
     opacity: 1;
     width: 40px;
   }
 }
 @keyframes mask {
-  0%{
+  0% {
     transform: translate(-50%, 20%) rotate(60deg);
   }
-  50%{
+  50% {
     transform: translate(-50%, 20%) rotate(240deg);
   }
-  100%{
+  100% {
     transform: translate(-50%, 20%) rotate(420deg);
   }
 }
 
 @keyframes popup {
-  0%{
+  0% {
     bottom: 0;
   }
-  50%{
+  50% {
     bottom: 20px;
   }
-  100%{
+  100% {
     bottom: 0;
   }
 }
 
-
-th, td {
+th,
+td {
   text-align: center;
   vertical-align: middle;
 }
